@@ -80,7 +80,7 @@ public class FirstCourseFragment extends Fragment {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
-               result.add(dataSnapshot.getValue(FirstCourseModel.class));
+                result.add(dataSnapshot.getValue(FirstCourseModel.class));
 
                 mAdapter.notifyDataSetChanged();
 

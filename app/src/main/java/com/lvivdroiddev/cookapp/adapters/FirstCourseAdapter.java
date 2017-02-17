@@ -14,13 +14,14 @@ import android.widget.TextView;
 import com.lvivdroiddev.cookapp.FirstCourseActivity;
 import com.lvivdroiddev.cookapp.R;
 import com.lvivdroiddev.cookapp.models.FirstCourseModel;
+import com.lvivdroiddev.cookapp.models.FirstModelRecept;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class FirstCourseAdapter extends RecyclerView.Adapter<FirstCourseAdapter.ViewHolder> {
 
-    private List<FirstCourseModel> courseList;
+    public List<FirstCourseModel> courseList;
     static Context context;
 
     public FirstCourseAdapter(List<FirstCourseModel> courseList) {
@@ -28,7 +29,7 @@ public class FirstCourseAdapter extends RecyclerView.Adapter<FirstCourseAdapter.
     }
 
 
-    static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 
         TextView nameOfCourse;
@@ -59,7 +60,7 @@ public class FirstCourseAdapter extends RecyclerView.Adapter<FirstCourseAdapter.
             switch (v.getId()) {
                 case R.id.card_view:
                     i = new Intent(v.getContext(), FirstCourseActivity.class);
-                    i.putExtra("pos", getAdapterPosition());
+                    i.putExtra("key", courseList.get(getAdapterPosition()).getKey());
                     i.putExtra("tool", nameOfCourse.getText().toString());
                     v.getContext().startActivity(i);
                     break;

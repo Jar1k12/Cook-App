@@ -6,26 +6,21 @@
     android:layout_height="match_parent"
     tools:context="com.lvivdroiddev.cookapp.FirstCourseActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:elevation="2dp"
-        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
-        xmlns:android="http://schemas.android.com/apk/res/android" />
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark" />
 
     <TextView
-        android:text=""
+        android:text="34ewrwerwer"
+        android:id="@+id/riceptOfCourse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="117dp"
-        android:layout_marginEnd="117dp"
-        android:layout_marginTop="104dp"
-        android:id="@+id/riceptOfCourse" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
